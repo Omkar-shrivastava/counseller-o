@@ -17,7 +17,7 @@ COUNSELLORS = [
     "id": "raj-sir",
     "name": "Raj Sir",
         "desc": "Helping Doctors Make the Right PG Choices 8+ Years of Admission Experience Speciality College Counselling Admission.",
-        "whatsapp": "917898999551",  # TEST NUMBER
+        "whatsapp": "916263381528",  # TEST NUMBER
     },
 ]
 
@@ -305,6 +305,10 @@ def index():
               <input type="text" name="ug_branch" required placeholder="e.g. XYZ College, Computer Science">
             </div>
             <div class="field">
+              <label>Preferred NEET PG Branch / Speciality *</label>
+              <input type="text" name="pg_branch" required placeholder="e.g. MD Medicine, MS Orthopaedics">
+            </div>
+            <div class="field">
               <label>Budget for PG *</label>
               <input type="text" name="budget" required placeholder="e.g. 10,000 - 15,000 / month">
             </div>
@@ -344,6 +348,7 @@ def contact(counsellor_id):
 
     visitor_name = request.form.get("visitor_name", "").strip()
     ug_branch = request.form.get("ug_branch", "").strip()
+    pg_branch = request.form.get("pg_branch", "").strip()
     budget = request.form.get("budget", "").strip()
     appointment_time = request.form.get("appointment_time", "").strip()
 
@@ -351,6 +356,7 @@ def contact(counsellor_id):
         f"New Enquiry - for {counsellor['name']}",
         f"Name: {visitor_name or '-'}",
         f"UG College / Branch: {ug_branch or '-'}",
+        f"Preferred NEET PG Branch / Speciality: {pg_branch or '-'}",
         f"PG Budget: {budget or '-'}",
         f"Appointment Time: {appointment_time or '-'}",
     ]
@@ -361,4 +367,4 @@ def contact(counsellor_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5001)
+  app.run(debug=False, host="0.0.0.0", port=5001)
