@@ -17,7 +17,7 @@ COUNSELLORS = [
     "id": "raj-sir",
     "name": "Raj Sir",
         "desc": "Helping Doctors Make the Right PG Choices 8+ Years of Admission Experience Speciality College Counselling Admission.",
-        "whatsapp": "916263381528",  # TEST NUMBER
+        "whatsapp": "917898999551",  # TEST NUMBER
     },
 ]
 
